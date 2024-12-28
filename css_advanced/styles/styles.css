@@ -19,9 +19,13 @@ body {
 
 /* Header Styles */
 .header {
-    background: #333;
+    background-image: url('../images/bg_image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #fff;
     padding: 1rem 0;
+    height: 300px;
 }
 
 .header .logo {
