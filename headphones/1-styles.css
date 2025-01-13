@@ -1,0 +1,162 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --primary-color: #FF6565;
+    --secondary-color: #333;
+    --background-color: #f9f9f9;
+    --font-family: 'Source Sans Pro', Arial, sans-serif;
+}
+
+/* Global Styles */
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--secondary-color);
+    background-color: var(--background-color);
+}
+
+/* Header */
+.header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+}
+
+.header .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo img {
+    height: 40px;
+}
+
+.header .nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.header .nav a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.header .nav a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/headphones_hero_1.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero .cta {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.hero .cta:hover {
+    opacity: 0.9;
+}
+
+/* What We Do Section */
+.what-we-do {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.what-we-do h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.service {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+}
+
+.service .icon {
+    font-size: 50px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.service h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.service p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Media Queries */
+@media (max-width: 480px) {
+    .services {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .service {
+        max-width: 100%;
+    }
+}
