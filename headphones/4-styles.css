@@ -1,155 +1,94 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Variables */
-:root {
-    --primary-color: #FF6565;
-    --secondary-color: #333;
-    --background-color: #f9f9f9;
-    --font-family: 'Source Sans Pro', Arial, sans-serif;
-}
-
-/* Global Styles */
+/* Reset CSS */
 body {
-    font-family: var(--font-family);
-    line-height: 1.6;
-    color: var(--secondary-color);
-    background-color: var(--background-color);
-}
-
-/* Header */
-.header {
-    background-color: #fff;
-    border-bottom: 1px solid #ddd;
-    padding: 20px 0;
-}
-
-.header .container {
-    max-width: 1000px;
-    margin: 0 auto;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer Section */
+  .footer {
+    background-color: #051b35; /* Dark Blue */
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    position: relative; /* Allows repositioning of elements inside */
+  }
+  
+  /* Footer Height Customization */
+  .footer {
+    min-height: 150px; /* Default Height */
+  }
+  
+  .footer-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.header .logo img {
-    height: 40px;
-}
-
-.header .nav ul {
-    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px 0;
+    position: relative; /* Enables movement adjustments */
+  }
+  
+  /* Logo Adjustments */
+  .footer-logo {
+    max-height: 40px;
+    position: relative;
+    top: 10px; /* Adjust vertical positioning */
+    left: 10px; /* Adjust horizontal positioning */
+  }
+  
+  /* Social Icons */
+  .social-icons {
     display: flex;
-    gap: 20px;
-}
-
-.header .nav a {
-    text-decoration: none;
-    color: var(--secondary-color);
-    font-size: 1rem;
-    transition: color 0.3s ease;
-}
-
-.header .nav a:hover {
-    color: var(--primary-color);
-}
-
-/* Hero Section */
-.hero {
-    background: url('images/headphones_hero_1.jpg') no-repeat center center/cover;
-    color: #fff;
-    text-align: center;
-    padding: 100px 20px;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-.hero .cta {
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+    gap: 10px;
+  }
+  
+  .icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    color: #002147; /* Dark Blue */
+    font-weight: bold;
+    font-size: 0.9rem;
     cursor: pointer;
-    transition: opacity 0.3s ease;
-}
-
-.hero .cta:hover {
-    opacity: 0.9;
-}
-
-/* Footer */
-.footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.footer .footer-logo {
-    height: 40px;
-    margin-bottom: 10px;
-}
-
-.footer .footer-left {
-    margin-bottom: 20px;
-}
-
-.footer .footer-right {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-direction: column;
-}
-
-.footer .footer-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-.footer .footer-links a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1rem;
-}
-
-.footer .footer-links a:hover {
-    color: var(--primary-color);
-}
-
-.footer .social-icons {
-    margin-top: 10px;
-}
-
-.footer .social-icons a {
-    text-decoration: none;
-    font-size: 1.5rem;
-    color: #fff;
-    margin: 0 10px;
-}
-
-.footer .social-icons a:hover {
-    color: var(--primary-color);
-}
-
-/* Media Queries */
-@media (max-width: 480px) {
-    .footer .footer-left,
-    .footer .footer-right {
-        flex-direction: column;
-        align-items: center;
+    position: relative; /* Enables movement adjustments */
+    top: 10px; /* Adjust vertical positioning */
+  }
+  
+  .icon:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Copyright Section */
+  .footer-bottom {
+    margin-top: 50px; /* Add space above */
+    margin-bottom: 0px; /* Add space below */
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .footer-top {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
     }
-}
+  
+    .social-icons {
+      gap: 15px;
+    }
+  }  

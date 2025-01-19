@@ -1,52 +1,43 @@
-# README.md for Headphones Project
+# Headphones Web Page
 
 ## Project Overview
-The Headphones Project is a responsive web page designed from scratch using HTML and CSS. This project focuses on adhering to accessibility and responsive design principles, replicating the provided Figma design, and delivering a visually appealing and user-friendly experience. The implementation avoids the use of external CSS frameworks and JavaScript, emphasizing a pure and robust codebase.
 
----
+This project is part of the ALX HTML/CSS learning module. The task is to implement a web page from scratch using HTML and CSS without the use of external libraries or JavaScript. The design was provided via Figma, and the goal is to recreate the page accurately, ensuring the webpage looks the same as the final design.
 
-## Requirements
+### Key Details:
+- **Design Source**: The Figma design can be found here: [Figma Design](https://www.figma.com). Duplicate it to your drafts for easy access.
+- **Fonts Used**: If the fonts are missing, download them here:
+  - [Source Sans Pro](https://fonts.google.com/specimen/Source+Sans+Pro)
+  - [Spin Cycle OT](https://www.fonts.com/font/monotype/spin-cycle)
+- **Important Notes**:
+  - Ensure the webpage switches to a mobile version when the screen width is 480px or less.
+  - Links should change to `#FF6565` when hovered or active.
+  - Buttons should have an opacity of 0.9 when hovered or active.
+  - The maximum width of the content should be 1000px and centered in the page.
 
-### Design Guidelines
-- **No External CSS Frameworks**: Frameworks like Bootstrap are not permitted.
-- **No JavaScript**: The functionality must rely solely on HTML and CSS.
-- **Responsive Design**:
-  - Activate the mobile version when the screen width is 480px or less.
-  - Maximum content width is set to 1000px, centered horizontally on the page.
-- **Hover and Active States**:
-  - Links hover/active color: `#FF6565`.
-  - Button hover/active effect: `opacity: 0.9`.
-- **Typography**:
-  - Fonts used: `Source Sans Pro` for body text and `Spin Cycle OT` for specific elements.
-- **Visual Fidelity**:
-  - Adhere to design specifications in the Figma file, rounding float values as needed.
+## Task Requirements
 
----
+### 1. **HTML/CSS**:
+   - Implement the webpage from scratch without using JavaScript.
+   - Follow the Figma design as closely as possible, including font sizes, colors, spacings, and layout.
 
-## Features
+### 2. **Responsive Design**:
+   - Ensure the webpage is fully responsive. The layout should adjust automatically for screen widths 480px and below (mobile version).
 
-1. **Semantic HTML5 Structure**:
-   - Organized and accessible elements for better usability and SEO.
-2. **Fully Responsive Design**:
-   - Layout adjusts seamlessly to various screen sizes.
-3. **Enhanced User Experience**:
-   - Interactive hover and active states for links and buttons.
-4. **Clean and Maintainable Code**:
-   - Modular CSS design for easy updates and scalability.
-5. **Accessibility Compliance**:
-   - Ensures inclusivity for all users, including those relying on assistive technologies.
+### 3. **Accessibility**:
+   - Ensure accessibility features are incorporated, such as proper use of semantic HTML and ARIA attributes where necessary.
 
----
+### 4. **Styling**:
+   - Use plain CSS for styling, avoiding the use of external CSS frameworks (e.g., Bootstrap).
+   - Ensure the design matches the Figma file in terms of typography, color scheme, and overall structure.
 
-## File Structure
+### 5. **File Structure**:
+   - The project must be placed in the `headphones` directory inside the `alx_html_css` GitHub repository.
 
-```plaintext
-alx_html_css/
-├── headphones/
-│   ├── index.html        # Main HTML file
-│   ├── styles/
-│   │   └── style.css     # CSS for styling the web page
-│   ├── assets/
-│   │   ├── images/       # Image files (e.g., logo, hero background)
-│   │   └── fonts/        # Custom fonts like Spin Cycle OT
-│   └── README.md         # Project documentation
+## Development Instructions
+
+### 1. **Clone the Repository**:
+   To start working on this project, clone the repository to your local machine:
+   ```bash
+   git clone https://github.com/dkcheetham/alx_html_css.git
+   cd alx_html_css/headphones
