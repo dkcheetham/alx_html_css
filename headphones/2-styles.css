@@ -1,118 +1,129 @@
 /* Reset CSS */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Variables */
-:root {
-    --primary-color: #FF6565;
-    --secondary-color: #333;
-    --font-family: 'Source Sans Pro', Arial, sans-serif;
-}
-
-/* Global Styles */
+/* Set base font and color */
 body {
-    font-family: var(--font-family);
-    line-height: 1.6;
-    color: var(--secondary-color);
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #fff; /* White text for better contrast */
+  line-height: 1.6;
 }
 
-/* Our Results Section */
+/* Container Styles */
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Our Results Section Styles */
 .our-results {
-    padding: 50px 0;
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    text-align: center;
+  background-image: url('images/headphones_hero_2.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+  position: relative; /* Ensure the background image stays behind */
+  z-index: 1; /* Background image stays behind */
 }
 
-.our-results .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-.our-results h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #fff;
-}
-
-.our-results p {
-    font-size: 1.0rem;
-    max-width: 950px;
-    width: 100%;
-    margin: 0 auto;
-    line-height: 1.4;
-    text-align: center;
-    margin-bottom: 40px;
-    color: #f4f4f4;
+.section-description {
+  font-size: 18px;
+  margin-bottom: 60px;
+  color: rgba(255, 255, 255, 0.8); /* Semi-transparent white text */
 }
 
 /* Results Grid */
-.results-grid {
-    display: flex;
-    justify-content: center; /* Center align items horizontally */
-    gap: 20px;
-    margin-top: 20px;
-    flex-wrap: wrap; /* Allows items to wrap if there's not enough space */
+.results {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-.result-item {
-    flex: 0 1 200px; /* Allows items to be flexible but with a minimum width */
-    display: flex;
-    justify-content: center; /* Center align pentagons horizontally */
-    align-items: center; /* Center align pentagons vertically */
-    text-align: center;
+.result {
+  flex: 1;
+  max-width: 25%;
+  text-align: center;
+  position: relative; /* Ensure the pentagon is positioned relative to the result */
+  transition: transform 0.3s ease; /* Smooth transition */
 }
 
-.polygon {
-    position: relative;
-    display: inline-block;
-    width: 150px;
-    height: 150px;
-    background-color: #FF6565;
-    clip-path: polygon(50% 0%, 100% 38%, 81% 100%, 19% 100%, 0% 38%);
-    color: var(--primary-color);
-    padding: 20px;
-    box-sizing: border-box;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.result:hover {
+  animation: bounce 0.5s ease; /* Bounce animation on hover */
 }
 
-.polygon h3 {
-    font-size: 2.5rem;
-    margin-top: 10px;
-    margin-bottom: 0px;
-    color: #fff;
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); /* Start and end position */
+  }
+  50% {
+    transform: translateY(-10px); /* Bounce up */
+  }
 }
 
-.polygon p {
-    font-size: 1rem;
-    color: #fff;
-    line-height: 1.0;
+/* Pentagon Shape */
+.pentagon {
+  width: 150px; /* Width of the pentagon */
+  height: 150px; /* Height of the pentagon */
+  background-color: rgba(255, 101, 101, 0.8); /* Semi-transparent red background */
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%); /* Pentagon shape */
+  position: absolute; /* Position the pentagon */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center the pentagon */
+  z-index: -1; /* Place it behind the text */
 }
 
-.polygon:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+.result-icon {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff; /* White text for the icon */
+  position: relative; /* Ensure text is above the pentagon */
+  z-index: 1; /* Place text above the pentagon */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .results-grid {
-        flex-direction: column;
-        align-items: center;
-    }
+.result-description {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9); /* Semi-transparent white text for the description */
+  position: relative; /* Ensure text is above the pentagon */
+  z-index: 1; /* Place text above the pentagon */
+}
 
-    .result-item {
-        margin-bottom: 20px;
-    }
+/* Mobile Styles */
+@media (max-width: 480px) {
+  .results {
+    flex-direction: column;
+    gap: 40px;
+  }
 
-    .polygon {
-        width: 120px;
-        height: 120px;
-    }
+  .result {
+    max-width: 100%;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .section-description {
+    font-size: 16px;
+  }
+
+  .result-icon {
+    font-size: 24px;
+  }
+
+  .result-description {
+    font-size: 12px;
+  }
 }

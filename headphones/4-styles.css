@@ -1,94 +1,84 @@
 /* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set base font and color */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: white;
-    color: black;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #000; /* Black text for better contrast */
+  line-height: 1.6;
+}
+
+/* Container Styles */
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Footer Section Styles */
+.footer {
+  background-color: #071629; /* Dark background */
+  padding: 60px 0;
+  text-align: center;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between; /* Space between logo and social media icons */
+  align-items: center; /* Vertically center items */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.footer .logo img {
+  height: 40px;
+}
+
+.footer .social-media {
+  display: flex;
+  gap: 20px;
+}
+
+.footer .social-link {
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer .social-link:hover {
+  color: #FF6565; /* Hover effect */
+}
+
+.footer .copyright {
+  width: 100%; /* Full width for copyright text */
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8); /* Semi-transparent white text */
+  margin-top: 50px; /* Add space above the copyright text */
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  .footer .container {
+    flex-direction: column; /* Stack items vertically on mobile */
+    gap: 20px; /* Add space between stacked items */
   }
-  
-  a {
-    text-decoration: none;
-    color: white;
+
+  .footer .logo,
+  .footer .social-media {
+    align-self: center; /* Center items on mobile */
   }
-  
-  a:hover {
-    text-decoration: underline;
+
+  .footer .social-link {
+    font-size: 20px;
   }
-  
-  /* Footer Section */
-  .footer {
-    background-color: #051b35; /* Dark Blue */
-    color: white;
-    text-align: center;
-    padding: 20px 10px;
-    position: relative; /* Allows repositioning of elements inside */
+
+  .footer .copyright {
+    font-size: 12px;
   }
-  
-  /* Footer Height Customization */
-  .footer {
-    min-height: 150px; /* Default Height */
-  }
-  
-  .footer-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 10px 0;
-    position: relative; /* Enables movement adjustments */
-  }
-  
-  /* Logo Adjustments */
-  .footer-logo {
-    max-height: 40px;
-    position: relative;
-    top: 10px; /* Adjust vertical positioning */
-    left: 10px; /* Adjust horizontal positioning */
-  }
-  
-  /* Social Icons */
-  .social-icons {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .icon {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: white;
-    color: #002147; /* Dark Blue */
-    font-weight: bold;
-    font-size: 0.9rem;
-    cursor: pointer;
-    position: relative; /* Enables movement adjustments */
-    top: 10px; /* Adjust vertical positioning */
-  }
-  
-  .icon:hover {
-    background-color: #f1f1f1;
-  }
-  
-  /* Copyright Section */
-  .footer-bottom {
-    margin-top: 50px; /* Add space above */
-    margin-bottom: 0px; /* Add space below */
-    font-size: 0.9rem;
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .footer-top {
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-    }
-  
-    .social-icons {
-      gap: 15px;
-    }
-  }  
+}

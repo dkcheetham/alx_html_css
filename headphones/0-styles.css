@@ -5,133 +5,188 @@
     box-sizing: border-box;
 }
 
-/* Variables */
-:root {
-    --primary-color: #FF6565;
-    --secondary-color: #333;
-    --font-family: 'Source Sans Pro', Arial, sans-serif;
-}
-
-/* Global Styles */
+/* Set base font and color */
 body {
-    font-family: var(--font-family);
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #fff;
     line-height: 1.6;
-    color: var(--secondary-color);
 }
 
-/* Header */
+/* Header Styles */
 .header {
-    background-image: url('images/headphones_hero_1.jpg'); /* Single background image */
-    background-position: center center;
+    background-image: url('images/headphones_hero_1.jpg');
     background-size: cover;
-    height: 645px; /* Ensure the entire header is covered */
-    color: #fff;
+    background-position: center;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+    justify-content: flex-start;
     text-align: center;
-    padding: 20px;
-    position: relative;
+    padding: 0;
 }
 
-/* Logo and Navigation Styling */
-.header .container {
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 20px 20px 0;
 }
 
-.header .logo img {
-    height: 50px;
+/* LOGO */
+.logo img {
+    height: 40px;
 }
 
-.header .nav ul {
+/* Navbar (Desktop) */
+.navbar .nav-list {
     list-style: none;
     display: flex;
     gap: 20px;
+    margin: 0;
+    padding: 0;
 }
 
-.header .nav a {
+.navbar .nav-item a {
+    color: #fff;
     text-decoration: none;
-    color: #fff;
-    font-size: 1rem;
-    transition: color 0.3s ease;
+    text-transform: capitalize;
+    font-size: 14px;
 }
 
-.header .nav a:hover {
-    color: var(--primary-color);
+.navbar .nav-item a:hover,
+.navbar .nav-item a:active {
+    color: #FF6565;
 }
 
-/* Hero Section */
-.hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1; /* Push content to fill available space */
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0px;
-    margin-top: 180px; /* Drop down the heading */
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px; /* Adjusted margin for better spacing */
-}
-
-.hero .cta {
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 10px 20px;
+/* Responsive Navigation Menu for Mobile */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    background: none;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    transition: opacity 0.3s ease;
 }
 
-.hero .cta:hover {
-    opacity: 0.9;
-}
-
-/* Hero Note Section */
-.hero-note {
-    font-size: 1rem; /* Default font size */
-    margin-top: 80px; /* Adjust space from other elements */
-    color: #fff; /* White text */
-    width: 100%; /* Full width of container */
-    max-width: 800px; /* Maximum width for better readability */
-    text-align: center; /* Center text */
-    line-height: 1.3; /* Adjust line height */
-}
-
-/* Media Query */
-@media (max-width: 480px) {
-    .header .container {
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
         flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
         text-align: center;
     }
 
-    .nav ul {
+    .navbar .nav-list {
         flex-direction: column;
         gap: 10px;
     }
 
-    .hero h1 {
-        font-size: 2rem;
+    .menu-toggle {
+        display: block;
     }
 
-    .hero p {
-        font-size: 1rem;
+    .navbar.active {
+        display: flex;
+    }
+}
+
+/* Hero Section Styles */
+.hero {
+    margin-top: 180px;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.hero-button {
+    background-color: #FF6565;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-bottom: 40px;
+    border-radius: 25px;
+}
+
+.hero-button:hover,
+.hero-button:active {
+    opacity: 0.9;
+}
+
+.hero-description {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Individual Heights for Each Section */
+#what-we-do {
+    height: auto;
+    min-height: 600px;
+}
+
+#our-results {
+    height: auto;
+    min-height: 600px;
+}
+
+#contact-us {
+    height: auto;
+    min-height: 620px;
+}
+
+#footer {
+    height: auto;
+    min-height: 300px;
+}
+
+/* Ensure embedded objects fit their content */
+object {
+    display: block;
+    width: 100%;
+    border: none;
+    overflow: hidden;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 480px) {
+    .hero {
+        margin-top: 100px;
     }
 
-    .hero-note {
-        font-size: 0.9rem; /* Smaller font size for mobile */
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    object {
+        height: auto;
+        min-height: 400px;
     }
 }

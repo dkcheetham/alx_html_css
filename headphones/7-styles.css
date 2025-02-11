@@ -39,7 +39,6 @@ body {
   color: #666; /* Gray text for description */
 }
 
-/* Services Grid */
 .services {
   display: flex;
   justify-content: space-between;
@@ -80,6 +79,62 @@ body {
   color: #666; /* Gray text for service descriptions */
 }
 
+/* Our Results Section Styles */
+.our-results {
+  background-image: url('images/headphones_hero_2.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+  position: relative; /* Ensure the background image stays behind */
+  z-index: 1; /* Background image stays behind */
+}
+
+.section-title.our-results-title {
+  color: #fff; /* White text for the title */
+}
+
+.section-description.our-results-description {
+  color: rgba(255, 255, 255, 0.8); /* Semi-transparent white text for the description */
+}
+
+.results {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.result {
+  flex: 1;
+  max-width: 25%;
+  text-align: center;
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.result:hover {
+  animation: bounce 0.5s ease; /* Bounce animation on hover */
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); /* Start and end position */
+  }
+  50% {
+    transform: translateY(-10px); /* Bounce up */
+  }
+}
+
+.result-icon {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff; /* White text for the icon */
+}
+
+.result-description {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9); /* Semi-transparent white text for the description */
+}
+
 /* Mobile Styles */
 @media (max-width: 480px) {
   .services {
@@ -91,23 +146,12 @@ body {
     max-width: 100%;
   }
 
-  .section-title {
-    font-size: 28px;
+  .results {
+    flex-direction: column;
+    gap: 40px;
   }
 
-  .section-description {
-    font-size: 16px;
-  }
-
-  .icon {
-    font-size: 50px;
-  }
-
-  .service-title {
-    font-size: 18px;
-  }
-
-  .service-description {
-    font-size: 14px;
+  .result {
+    max-width: 100%;
   }
 }
