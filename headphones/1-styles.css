@@ -110,4 +110,14 @@ body {
   .service-description {
     font-size: 14px;
   }
+
+  /* Hide the navigation bar in mobile view (if it's appearing inside the section) */
+  .navbar {
+    display: none !important;
+  }
+
+  /* Ensure the section has a proper height */
+  .what-we-do {
+    min-height: 600px; /* Adjust this value as needed */
+  }
 }

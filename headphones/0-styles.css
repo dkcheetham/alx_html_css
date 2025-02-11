@@ -167,26 +167,45 @@ object {
     overflow: hidden;
 }
 
-/* Mobile View Adjustments */
-@media (max-width: 480px) {
-    .hero {
-        margin-top: 100px;
+/* Hide the checkbox */
+#menu-checkbox {
+    display: none;
+}
+
+/* Hamburger menu button (☰) */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 28px;
+    color: white;
+    background: none;
+    border: none;
+    position: relative;
+    z-index: 10;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    /* Show hamburger icon */
+    .menu-toggle {
+        display: block;
     }
 
-    .hero-title {
-        font-size: 32px;
+    /* Hide navbar by default */
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0);
+        text-align: center;
+        padding: 20px 0;
     }
 
-    .hero-subtitle {
-        font-size: 18px;
-    }
-
-    .hero-description {
-        font-size: 14px;
-    }
-
-    object {
-        height: auto;
-        min-height: 400px;
+    /* Display menu when checkbox is checked */
+    #menu-checkbox:checked ~ .navbar {
+        display: flex;
     }
 }
