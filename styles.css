@@ -1,0 +1,86 @@
+/* styles.css */
+
+/* Step 1: Make body a flex container in column direction */
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Style for logo (already provided in base CSS, we’ll just use it in HTML) */
+.logo {
+  font-size: 4rem;
+  font-weight: bold;
+  padding-right: 30px;
+}
+
+/* Step 2: Make main a flex container in row direction */
+main {
+  display: flex;
+  flex-direction: row;
+  flex: auto;
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+/* Step 3: Article takes 2/3 of width */
+article {
+  flex: 2;
+  overflow-y: auto;
+  padding: 20px;
+  background-color: #a5a8ac;
+  border-radius: 5px;
+}
+
+/* Step 4: Aside takes 1/3 of width */
+aside {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  background-color: #d6a53b;
+  border-left: 2px solid #ccc;
+}
+
+/* Header and Footer Styling */
+header {
+  background-color: #a1480d;
+  color: white;
+  padding: 15px;
+}
+
+footer {
+  background-color: #a1480d;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Table styling inside article or anywhere */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+/* Optional: Style the navigation links in header */
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+header li {
+  display: flex;
+  align-items: center;
+}
