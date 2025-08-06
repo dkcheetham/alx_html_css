@@ -1,0 +1,163 @@
+/* ========== RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== VARIABLES ========== */
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #e05252; /* Slightly darker CTA background */
+  --background-color: #1c1c1c;
+  --font-family: 'Source Sans Pro', sans-serif;
+  --max-width: 1000px;
+}
+
+/* ========== GLOBAL STYLES ========== */
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--primary-color);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+/* ========== HEADER SECTION ========== */
+.site-header {
+  background-image: url('images/headphones_hero_1.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  text-align: center;
+  position: relative;
+}
+
+/* ========== NAVIGATION ========== */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.logo {
+  height: 30px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:active {
+  color: var(--secondary-color);
+}
+
+/* ========== HERO ========== */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-top: 180px;
+  margin-bottom: 1px;
+  line-height: 1.3;
+  max-width: 800px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #cc4c4c; /* darker than #ff6565 */
+  color: var(--primary-color);
+  padding: 15px 30px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px; /* more curved edges */
+  transition: opacity 0.3s ease;
+}
+
+.btn:hover,
+.btn:active {
+  opacity: 0.9;
+}
+
+.hero-subtext {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  font-size: 1rem;
+  font-weight: 350;
+  color: var(--primary-color);
+  opacity: 0.8;
+  max-width: 630px;
+  line-height: 1.6;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 480px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p,
+  .hero-subtext {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 12px 24px;
+  }
+
+  .hero h1,
+  .hero p,
+  .hero-subtext {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+}
