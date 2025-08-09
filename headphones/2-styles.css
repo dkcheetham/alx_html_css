@@ -1,0 +1,337 @@
+/* ========== RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== VARIABLES ========== */
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #e05252;
+  --background-color: #1c1c1c;
+  --font-family: 'Source Sans Pro', sans-serif;
+  --max-width: 1000px;
+}
+
+/* ========== GLOBAL STYLES ========== */
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--primary-color);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ========== HEADER SECTION ========== */
+.site-header {
+  background-image: url('images/headphones_hero_1.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  text-align: center;
+  position: relative;
+}
+
+/* ========== NAVIGATION ========== */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.logo {
+  height: 30px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:active {
+  color: var(--secondary-color);
+}
+
+/* ========== HERO ========== */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-top: 180px;
+  margin-bottom: 1px;
+  line-height: 1.3;
+  max-width: 800px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #cc4c4c; /* darker than #ff6565 */
+  color: var(--primary-color);
+  padding: 15px 30px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px; /* more curved edges */
+  transition: opacity 0.3s ease;
+}
+
+.btn:hover,
+.btn:active {
+  opacity: 0.9;
+}
+
+.hero-subtext {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  font-size: 1rem;
+  font-weight: 350;
+  color: var(--primary-color);
+  opacity: 0.8;
+  max-width: 630px;
+  line-height: 1.6;
+}
+
+/* ========== WHAT WE DO SECTION ========== */
+.what-we-do {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #ffffff; /* Light background for contrast */
+  color: #000000; /* Dark text */
+}
+
+.what-we-do h2 {
+  font-size: 2.0rem;
+  margin-bottom: 30px;
+}
+
+.section-description {
+  max-width: 650px;
+  margin: 0 auto 50px auto;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Features grid */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 30px;
+}
+
+/* Single feature card */
+.feature {
+  padding: 20px;
+}
+
+.feature .icon {
+  font-size: 100px;
+  color: #ff6565; /* Accent color */
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.feature h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 0.8rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* ========== ICON FONT STYLES ========== */
+
+/* 1. Font Face Declaration */
+@font-face {
+  font-family: 'holberton_school-icon';
+  src: url('holberton_school-icon/fonts/holberton_school-icon.eot');
+  src: url('holberton_school-icon/fonts/holberton_school-icon.eot?#iefix') format('embedded-opentype'),
+       url('holberton_school-icon/fonts/holberton_school-icon.woff') format('woff'),
+       url('holberton_school-icon/fonts/holberton_school-icon.ttf') format('truetype'),
+       url('holberton_school-icon/fonts/holberton_school-icon.svg#holberton_school-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+/* 2. Base icon class */
+[class^="holberton_school-icon-"],
+[class*=" holberton_school-icon-"] {
+  font-family: 'holberton_school-icon' !important;
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.holberton_school-icon-ic_sound::before {
+  content: "\e90e"; 
+}
+
+.holberton_school-icon-ic_video::before {
+  content: "\e910";
+}
+
+.holberton_school-icon-ic_music::before {
+  content: "\e90d";
+}
+
+.holberton_school-icon-ic_headphones::before {
+  content: "\e909";
+}
+
+/* ========== OUR RESULTS SECTION ========== */
+.our-results {
+  background-image: url('images/headphones_hero_2.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.our-results h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.our-results .section-description {
+  max-width: 650px;
+  margin: 0 auto 50px auto;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 60px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Pentagon shape for the result background */
+.result-card {
+  background-color: #ff6565;
+  padding: 40px 20px;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  min-height: 100px;
+  text-align: center;
+}
+
+.result-card h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #fff; /* White text on red background */
+}
+
+.result-card p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 480px) {
+  .nav-bar {
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    padding: 10px 0;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    margin: 0;
+    background: transparent;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+    white-space: nowrap;
+  }
+
+  .logo {
+    height: 30px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p,
+  .hero-subtext {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 12px 24px;
+  }
+
+  .hero h1,
+  .hero p,
+  .hero-subtext {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .results-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 30px;
+    max-width: 100%;
+  }
+
+  .result-card {
+    min-width: 120px;
+    min-height: 120px;
+    padding: 30px 15px;
+  }
+}
